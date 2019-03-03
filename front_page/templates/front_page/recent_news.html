@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+
+{% load staticfiles %}
+{% load template_tags %}
+{% block header %}
+
+
+  <div class="wrapper col7">
+  		<div id="container2">
+  			<h1 style="font-size:28px">Berita Terbaru</h1>
+        {% for news in allNews %}
+                <p style='margin-bottom:-2px; color:#FF0000;'><b> {{tanggalLama|update_variable:news.tanggal}} </b></p>
+              <ul>
+                <li><a href="{% url 'front_page:detail_berita' news.id %}">{{news.nama}}</a></li>
+              </ul>
+        {% endfor %}
+      </div>
+  </div>
+
+  <div class="page">
+      <center>
+        <a href="">Lihat Berita Lengkap</a>
+      </center>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

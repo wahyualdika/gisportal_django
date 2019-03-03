@@ -1,0 +1,52 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+{% block header %}
+<div class="wrapper col6">
+    <div id="breadcrumb" >
+      <ul>
+        <li><a href="{% url 'front_page:index' %}">HOME</a></li>
+        <li>&#187;</li>
+        <li class="current"><a href="#">List Peta</a></li>
+      </ul>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    {% for peta in allPeta %}
+        <div class="col-md-4">
+          <h2><span class='label label-default' style='text-align:center;'></span></h2>
+            <a target='_blank' href="#">
+              <img class='img-responsive' src="{{ peta.path.url }}" alt='' width='300' height='200'>
+            </a>
+            <div style='margin:5px;text-align:center'>
+              <a class='btn btn-default' href="">Download As PNG</a>
+              <a class='btn btn-default' href="">Download As PFD</a>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+  {% if allPeta.has_other_pages %}
+    <ul class="pagination">
+      {% if allPeta.has_previous %}
+        <li><a href="?page={{ allPeta.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&laquo;</span></li>
+      {% endif %}
+      {% for i in allPeta.paginator.page_range %}
+        {% if allPeta.number == i %}
+          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        {% else %}
+          <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if allPeta.has_next %}
+        <li><a href="?page={{ allPeta.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+  {% endif %}
+</div>
+{% endblock %}
+{% block footer%}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method='POST' enctype='multipart/form-data'>
+{% csrf_token %}
+<script type="text/javascript">
+         $(function() {
+      $("#datepicker").datetimepicker({
+        format: 'DD/MM/YYYY'
+      });
+    });
+</script>
+<div class='form-group'>
+  <label for='namaBerita'>Nama Berita</label>
+  {{form.nama}}
+</div>
+
+<div class='form-group'>
+  <label for='deskripsiBerita'>Deskripsi Berita</label>
+  {{form.deskripsi}}
+</div>
+
+<div class='form-group'>
+  <label for='exampleInputTanggal'>Tanggal Data Dimasukkan</label>
+  <div class='input-group date'>
+    {{form.tanggal}}
+    <div class='input-group-addon'>
+      <span class='glyphicon glyphicon-calendar'></span>
+    </div>
+  </div>
+</div>
+
+<div class='form-group'>
+  <label for='exampleInputLink'>Link Berita</label>
+  {{form.link}}
+</div>
+
+<div class='form-group'>
+  <label for='exampleInputFile'>Upload Gambar (pastikan file dibawah 1Mb)</label>
+  {{form.path}}
+</div>
+
+<button type='submit' name='submit' class='btn btn-default'>Submit</button>
+</form>
+{% endblock %}

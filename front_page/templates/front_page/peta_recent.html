@@ -1,0 +1,54 @@
+{% extends 'master.html' %}
+
+{% load staticfiles %}
+
+{% block header %}
+<div class="wrapper col6">
+  <div id="breadcrumb">
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="#">Layout Peta</a></li>
+    </ul>
+  </div>
+</div>
+
+{% if allPeta %}
+<div class="wrapper col7">
+    <div id="container3">
+      {% for peta in allPeta %}
+          <div class='img'>
+            <a target='_blank' href="#">
+            <img src="{{ peta.path.url }}" alt='' width='300' height='200'>
+          </a><div class='desc'>{{ peta.nama }}</div>
+          <div style='margin:5px;'>
+            <a class='btn btn-default' href="">Download As PNG</a>
+            <a class='btn btn-default' href="">Download As PFD</a>
+          </div>
+          </div>
+      {% endfor %}
+  <div class="page">
+      <center>
+        <a href="{% url 'front_page:all_peta' %}">Lihat lebih lengkap</a>
+      </center>
+  </div>
+
+</div>
+</div>
+{% else %}
+<div class="wrapper col7">
+    <div id="container3">
+      <div class="page">
+      			<center>
+      				<a href="">Tidak ada peta</a>
+      			</center>
+      </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+
+{% block footer%}
+{% endblock %}

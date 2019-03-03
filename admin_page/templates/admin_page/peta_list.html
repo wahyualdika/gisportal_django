@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <table class='table'>
+    <tr>
+      <th>Nama Peta</th>
+      <th>Deskripsi</th>
+      <th>Link</th>
+      <th style='text-align:center'>Aksi</th>
+    </tr>
+    {% for peta in allPeta %}
+        <tr>
+          <td>{{peta.nama}}</td>
+          <td>{{peta.deskripsi}}</td>
+          <td><a href="{% url 'admin_page:peta_detail' pk=peta.pk %}">Lihat Peta</a></td>
+          <td style='text-align:center'><a href="{% url 'admin_page:peta_delete' pk=peta.pk %}" class='btn btn-default'>Hapus</a>
+          <a href="{% url 'admin_page:peta_update' pk=peta.pk %}" class='btn btn-default'>Edit</a></td>
+        </tr>
+    {% endfor %}
+  </table>
+
+  {% if is_paginated %}
+    <ul class="pagination">
+      {% if allPeta.has_previous %}
+        <li><a href="?page={{ allPeta.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&laquo;</span></li>
+      {% endif %}
+      {% for i in allPeta.paginator.page_range %}
+        {% if allPeta.number == i %}
+          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        {% else %}
+          <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if allPeta.has_next %}
+        <li><a href="?page={{ allPeta.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+{% endblock %}

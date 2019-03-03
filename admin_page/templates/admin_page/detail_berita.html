@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="panel panel-primary"><div class="panel-heading">
+    <h3 class="panel-title">Judul Berita</h3>
+  </div>
+  <div class="panel-body">
+    {{ berita.nama }}
+  </div></div>
+<div class="panel panel-primary"><div class="panel-heading">
+    <h3 class="panel-title">Tanggal Ditambahkan</h3>
+  </div>
+  <div class="panel-body">
+
+  </div></div>
+<div class="panel panel-primary"><div class="panel-heading">
+    <h3 class="panel-title">Deskripsi Berita</h3>
+  </div>
+  <div class="panel-body">
+    {{berita.deskripsi}}
+  </div></div>
+
+<div class="panel panel-primary"><div class="panel-heading">
+    <h3 class="panel-title">Gambar Berita</h3>
+</div>
+  <div class="panel-body">
+   <img src="{{ berita.path.url }}" width='180' height='100' class='img-responsive' alt='image-berita'>
+</div>
+</div>
+
+{% endblock %}

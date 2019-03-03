@@ -1,0 +1,27 @@
+	
+	dojo.require("dijit.layout.BorderContainer");
+	dojo.require("dijit.layout.ContentPane");
+	dojo.require("dijit.layout.TabContainer");
+	dojo.require("esri.map");
+	dojo.require("esri.dijit.BasemapToggle");
+	dojo.require("esri.layers.FeatureLayer");
+	dojo.require("esri.layers.ArcGISDynamicMapServiceLayer");
+	dojo.require("esri.layers.ImageParameters");
+	dojo.require("esri.dijit.HomeButton");
+	dojo.require("dijit.form.Button");
+	dojo.require("dijit.Toolbar");
+	dojo.require("esri.InfoTemplate");
+	dojo.require("esri.toolbars.navigation");
+	dojo.require("esri.dijit.Legend");
+	dojo.require("esri.dijit.Scalebar");
+	dojo.require("dojo.parser");
+	dojo.require("esri.geometry.webMercatorUtils");
+	dojo.require("esri.tasks.FindTask");
+	dojo.require("esri.tasks.FindParameters");
+	dojo.require("esri.symbols.SimpleMarkerSymbol");
+	dojo.require("esri.symbols.SimpleLineSymbol");
+	dojo.require("esri.Color");
+	dojo.require("dojo/_base/array");
+	dojo.require("dojo/i18n!esri/nls/jsapi");
+	dojo.require("esri.dijit.Print");
+	dojo.require("esri.tasks.PrintTemplate");

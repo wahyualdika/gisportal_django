@@ -1,0 +1,149 @@
+@charset "utf-8";
+/*
+Template Name: PlusBusiness
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("navi.css");
+
+
+html{overflow-y:scroll;}
+body{margin:0; padding:0; font-size:13px; font-family:verdana, Arial, Helvetica, sans-serif; color:#FFFFFF; background-color:#FFFFFF;}
+
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart{margin:0; padding:0; list-style-type:none;}
+
+.clear{clear:both;}
+br.clear{clear:both; margin-top:-15px;}
+
+a{color:#FFFFFF; background-color:#FFFFFF; outline:none; text-decoration:none;}
+h3{color:#FFFFFF;}
+
+.fl_left, .imgl{float:left;}
+.fl_right, .imgr{float:right;}
+
+img{display:block; margin:0; padding:0; border:none;}
+.imgl, .imgr{border:1px solid #FFFFFF; padding:5px;}
+.imgl{margin:0 8px 8px 0; clear:left;}
+.imgr{margin:0 0 8px 8px; clear:right;}
+
+/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper{display:block; width:100%; margin:0; text-align:left;}
+div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{margin:0; padding:0; font-size:20px; font-weight:normal; line-height:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+.col1{color:#40C440; background-color:#1A4C1A;}
+.col2{color:#40C440; background-color:#40C440; height:350px;}
+.col3{color:#40C440; background-color:#FFFFFF;}
+.col3 a{color:#FFFFFF; background-color:#FFFFFF;}
+.col4{color:#FFFFFF; background-color:#28536C; clear:both;}
+.col4 a{color:#40C440; background-color:#28536C;}
+.col5, .col5 a{color:#FFFFFF; background-color:#53B1E9;}
+.col6{color:#40C440; background-color:#40C440;}
+.col7{color:#1A4C1A; background-color:#FFFFFF;}
+.col200, .col200 b{color:#FFFFFF; background-color:#FFFFFF;} /*extra col*/
+
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#header, #topbar, #homepage, #breadcrumb, #container, #container2, #container3, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
+
+/* ----------------------------------------------Header------------------------------------- */
+
+#header{padding:20px 0; z-index:1000;}
+#header #logo{display:block; float:left; width:320px; overflow:hidden;}
+#header #logo h1, #header #logo p{margin:0; padding:0; line-height:normal;}
+#header #logo h1{font-size:36px; text-transform:uppercase;}
+#header h1 a{color:#40C440; background-color:#1A4C1A;}
+
+.header-logo {
+	display:block;
+	width:100px;
+	height:102px;
+	background:url(../img/logo/Aceh.png) no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin:-10px 10px -80px -95px;
+}
+
+/* ----------------------------------------------Homepage Block------------------------------------- */
+
+.homepage{display:block; width:100%; margin:1px 0 0 0; padding:0;}
+.homepage ul{margin:0; padding:0; list-style:none;}
+.homepage li{display:block; float:left; width:300px; margin:0 30px 0 0; padding:0;}
+.homepage li.last{margin-right:0;}
+.homepage li h2{display:block; width:100%; height:65px; margin:0; padding:15px 0 8px 0; font-weight:normal; line-height:normal; border-bottom:1px dotted #40C440;}
+.homepage li h2 img{float:left; margin:-15px 8px 0 0; padding:5px; border:2px solid #40C440;}
+.homepage p{margin:0 0 25px 0; padding:0; line-height:1.6em;}
+.homepage p.readmore{display:block; text-align:right; line-height:normal; font-weight:bold;}
+.homepage p.readmore a{padding:8px 15px 10px; color:#FFFFFF; background-color:#40C440;}
+
+.homepage2{display:block; width:100%; margin:15px 0 0 0; padding:0;}
+.homepage2 ul{margin:0; padding:0; list-style:none;}
+.homepage2 li{display:block; float:left; width:300px; margin:0 30px 0 0; padding:0;}
+.homepage2 li.last{margin-right:0;margin-bottom:0px;}
+.homepage2 li h2{display:block; width:100%; height:65px; margin:0; padding:15px 0 8px 0; font-weight:normal; line-height:normal; border-bottom:1px dotted #40C440;}
+.homepage2 li h2 img{float:left; margin:-15px 8px 0 0; padding:5px; border:2px solid #40C440;}
+.homepage2 p{margin:0 0 25px 0; padding:0; line-height:1.6em;}
+.homepage2 p.readmore{display:block; text-align:right; line-height:normal; font-weight:bold;}
+.homepage2 p.readmore a{padding:8px 15px 10px; color:#FFFFFF; background-color:#40C440;}
+
+/* ----------------------------------------------BreadCrumb------------------------------------- */
+
+#breadcrumb{padding:20px 0; color:#FFFFFF;}
+#breadcrumb a{padding:20px 0; background-color:#40C440; color:#FFFFFF;}
+#breadcrumb ul{margin:0; padding:0; list-style:none;}
+#breadcrumb ul li{display:inline;}
+#breadcrumb ul li.current a{color:#FFFFFF;}
+
+/* ----------------------------------------------Content------------------------------------- */
+
+#container{padding:20px 0;}
+#container h1, #container h2, #container h4, #container h5, #container h6{margin:0 0 15px 0; padding:0 0 8px 0; border-bottom:1px solid #FFFFFF;}
+
+#container2{padding:20px 0;}
+#container2 h1{margin:0 0 15px 0; padding:0 0 8px 0; border-bottom:1px solid #FFFFFF;}
+#container2 img{margin-bottom:25px;}
+#container2 li{font-size:13px; font-family:verdana, Arial, Helvetica, sans-serif;}
+#container2 p{margin:0 0 25px 0; padding:0; line-height:1.6em; font-size:13px; font-family:verdana, Arial, Helvetica, sans-serif;}
+#container2 table tr td{width:300px;text-align:left;}
+#container2 table tr td a{color:#40C440; font-size:13px;}
+#container2 .page a{color:#40C440; font-size:13px;}
+
+#container3{padding:20px 0;}
+#container3 .img {margin: 10px; border: 1px solid #ccc; float:left; width: 150px;}
+#container3 .img:hover {border: 1px solid #777;}
+#container3 .img img {width: 100%; height: auto;}
+#container3 .desc {padding: 15px; text-align: center;}
+#container3 .page { clear:both;}
+#container3 .page a{color:#40C440; font-size:13px;}
+
+/* ----------------------------------------------Content Block------------------------------------- */
+
+#content{display:block; float:left; width:600px;}
+
+/* ----------------------------------------------Footer------------------------------------- */
+
+#footer{padding:20px 0;}
+#footer ul{margin:0; padding:0; list-style:none;}
+#footer h2{margin:0 0 15px 0; padding:0 0 8px 0; font-size:18px; color:#CCCCCC; background-color:#28536C; border-bottom:1px dotted #FFFFFF;}
+#footer .box{display:block; float:right; width:250px; margin:0 0 0 25px; padding:0;}
+#footer .box1{display:block; float:left; width:400px; line-height:1.6em;}
+#footer .box1 .imgl{border:1px solid #CCCCCC; padding:5px; color:#FFFFFF; background-color:#28536C;}
+#footer .contactdetails li{margin:0 0 8px 0;}
+#footer .flickrbox, #footer .flickrbox .wrap{display:block; width:260px;}
+#footer .flickrbox .wrap .fix{clear:both;}
+#footer .flickrbox .wrap .flickr_badge_image{display:block; float:left; margin:0 10px 10px 0; width:138px; height:50px;} /*ukuran gambar bagian dinas terkait*/
+#footer .flickrbox .wrap #flickr_badge_image3, #footer .flickrbox .wrap #flickr_badge_image6{margin-right:0;}
+
+/* ----------------------------------------------Copyright------------------------------------- */
+
+#copyright{padding:10px 0;}
+#copyright p{margin:0; padding:0;}

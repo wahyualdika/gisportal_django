@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, admin</h1>
+  <p>Selamat di halaman utama administrator,silahkan menekan tombol dibawah untuk menginput Peta atau berita</p>
+  <p><a class="btn btn-primary btn-lg" href="{% url 'admin_page:berita_input' %}" role="button">Berita</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'admin_page:peta_input' %}" role="button">Peta</a></p>
+  </div>
+</div>
+{% endblock %}

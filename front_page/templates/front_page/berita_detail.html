@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+
+{% block header %}
+
+<div class="wrapper col6">
+    <div id="breadcrumb">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li>&#187;</li>
+        <li class="current"><a href="{% url 'front_page:recent_berita' %}">Berita Terbaru</a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="wrapper col7">
+    <div id="container2">
+      <img src="{{ news.path.url }}" width="525" height="350">
+      <h1 style="font-size:28px">{{news.nama}}</h1>
+      <p>{{ news.deskripsi }}</p>
+    </div>
+</div>
+
+{% endblock %}

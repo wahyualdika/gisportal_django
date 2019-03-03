@@ -1,0 +1,91 @@
+
+	#map {
+		height: 100%;
+		width: 100%;
+	}
+	
+	#HomeButton {
+		position: absolute;
+		top: 85px;
+		left: 19px;
+		z-index: 50;
+	}
+	
+	#BasemapToggle {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      z-index: 50;
+	}
+	
+	#printButton {
+		float:right;
+		margin-right:50px;
+		margin-top:-6px;
+	}
+	
+	.esriPrint{
+		margin: 0;
+		padding: 0;
+	}
+
+	.esriPrintout{
+		float:right;
+		color:black;
+		margin-top:5px;
+	}
+	
+	.collapsibleList li{
+		list-style-image:url('../img/navi/expanded.gif');
+		cursor:auto;
+		position:relative;
+		left:-25px;
+		margin-top:5px;
+		width:180px;
+	}
+
+	li.collapsibleListOpen{
+		list-style-image:url('../img/navi/expanded.gif');
+		cursor:pointer;
+	}
+
+	li.collapsibleListClosed{
+		list-style-image:url('../img/navi/collapsed.gif');
+		cursor:pointer;
+	}
+
+	.collapsibleList ul{
+		position:relative;
+		top:0px;
+	}
+	
+	.zoominIcon {
+		background-image: url(../img/navi/zoom_in24.png);
+		width: 24px;
+		height: 24px;
+	} 
+	
+	.zoomoutIcon { 
+		background-image: url(../img/navi/zoom_out24.png); 
+		width: 24px;
+		height: 24px; 
+	}
+	
+	.zoomprevIcon { 
+		background-image: url(../img/navi/back24.png); 
+		width: 24px;
+		height: 24px; 
+	}
+	
+	.zoomnextIcon { 
+		background-image: url(../img/navi/next24.png); 
+		width: 24px;
+		height: 24px;
+	}
+	
+	.panIcon { 
+		background-image: url(../img/navi/pan24.png); 
+		width: 24px;
+		height: 24px;
+	}	
+		
