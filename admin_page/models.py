@@ -19,7 +19,7 @@ def auto_delete_peta_on_delete(sender, instance, **kwargs):
 def auto_delete_Berita_on_delete(sender, instance, **kwargs):
     """
     Deletes file from filesystem
-    when corresponding `Peta` object is deleted.
+    when corresponding `Berita` object is deleted.
     """
     if instance.path:
         if os.path.isfile(instance.path.path):

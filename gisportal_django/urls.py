@@ -23,10 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('front_page.urls')),
     path('accounts/login',views.LoginView.as_view(),name='login'),
-    path('accounts/logout/', views.logout, name='logout', kwargs={'next_page': '/'}),
+    path('accounts/logout/', views.logout, name='logout', kwargs={'next_page': '/wsgi'}),
     path('profile/', include('admin_page.urls')),
     path('reset-password/',include('django.contrib.auth.urls')),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#for development purpose
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
