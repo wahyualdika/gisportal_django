@@ -1,6 +1,8 @@
 FROM django
 
-ADD . /gisportal_django /gisportal_django/
+RUN mkdir /gisportal_django
+
+ADD . /gisportal_django/
 
 WORKDIR /gisportal_django
 
